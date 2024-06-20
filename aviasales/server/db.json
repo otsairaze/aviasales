@@ -1,7 +1,7 @@
 {
   "flights": [
     {
-      "price": "13 400 Р",
+      "price": 5400,
       "legs": [
         {
           "route": "MOW – NKT",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "price": "14 200 Р",
+      "price": 11200,
       "legs": [
         {
           "route": "MOW – NKT",
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "price": "12 800 Р",
+      "price": 9800,
       "legs": [
         {
           "route": "MOW – NKT",

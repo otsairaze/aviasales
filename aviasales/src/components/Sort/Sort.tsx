@@ -1,13 +1,14 @@
+import { useState } from "react";
 import { Checkbox } from "../Checkbox/Checkbox";
 import styles from "./Sort.module.scss";
 
 export const Sort = () => {
   const sortText = [
     "Все",
-    "Без пересадок",
-    "1 пересадка",
-    "2 пересадки",
-    "3 пересадки",
+    "Более 5000 Р",
+    "Более 7000 Р",
+    "Более 10000 Р",
+    "Более 12000 Р",
   ];
 
   return (

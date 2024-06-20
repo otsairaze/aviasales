@@ -12,15 +12,7 @@ interface CardProps {
   legs: Array<Record<string, string>>;
 }
 
-const Card: FC<CardProps> = ({
-  price,
-  route,
-  time,
-  duration,
-  stops,
-  stopcities,
-  legs,
-}) => {
+const Card: FC<CardProps> = ({ price, legs }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.row}>

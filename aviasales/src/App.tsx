@@ -5,6 +5,7 @@ import { Button, Sort } from "./components";
 
 import { useEffect, useState } from "react";
 import { getPosts } from "./api/request";
+import axios from "axios";
 
 const buttonText = ["Самый дешевый", "Самый быстрый", "Оптимальный"];
 
@@ -12,11 +13,11 @@ function App() {
   const [flights, setFlights] = useState([]);
 
   useEffect(() => {
-    (async () => {
-      await getPosts()
-        .then((res) => setFlights(res))
-        .catch((err) => console.log(err));
-    })();
+    axios
+      .get(`http://localhost:3000/flights?${`price_gt = 6000`}`)
+      .then((response) => {
+        setFlights(response.data);
+      });
   }, []);
 
   return (
