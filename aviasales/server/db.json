@@ -1,0 +1,61 @@
+{
+  "flights": [
+    {
+      "price": "13 400 Р",
+      "legs": [
+        {
+          "route": "MOW – NKT",
+          "time": "09:00 – 06:00",
+          "duration": "21ч 00м",
+          "stops": "2 пересадки",
+          "stop_cities": ["DXB", "BKK"]
+        },
+        {
+          "route": "MOW – NKT",
+          "time": "12:00 – 03:00",
+          "duration": "13ч 00м",
+          "stops": "1 пересадка",
+          "stop_cities": ["DXB"]
+        }
+      ]
+    },
+    {
+      "price": "14 200 Р",
+      "legs": [
+        {
+          "route": "MOW – NKT",
+          "time": "11:00 – 08:00",
+          "duration": "21ч 00м",
+          "stops": "2 пересадки",
+          "stop_cities": ["IST", "DOH"]
+        },
+        {
+          "route": "MOW – NKT",
+          "time": "15:00 – 06:00",
+          "duration": "15ч 00м",
+          "stops": "1 пересадка",
+          "stop_cities": ["DOH"]
+        }
+      ]
+    },
+    {
+      "price": "12 800 Р",
+      "legs": [
+        {
+          "route": "MOW – NKT",
+          "time": "10:30 – 07:30",
+          "duration": "21ч 00м",
+          "stops": "2 пересадки",
+          "stop_cities": ["FRA", "SIN"]
+        },
+        {
+          "route": "MOW – NKT",
+          "time": "13:00 – 05:00",
+          "duration": "13ч 00м",
+          "stops": "1 пересадка",
+          "stop_cities": ["SIN"]
+        }
+      ]
+    }
+  ]
+}

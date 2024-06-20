@@ -1,10 +1,24 @@
 import logo from "./assets/logo.png";
-import { Button, Sort, Checkbox } from "./components";
 import "./scss/style.scss";
+import Card from "./components/Card/Card";
+import { Button, Sort } from "./components";
+
+import { useEffect, useState } from "react";
+import { getPosts } from "./api/request";
 
 const buttonText = ["Самый дешевый", "Самый быстрый", "Оптимальный"];
 
 function App() {
+  const [flights, setFlights] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      await getPosts()
+        .then((res) => setFlights(res))
+        .catch((err) => console.log(err));
+    })();
+  }, []);
+
   return (
     <>
       <div className="container">
@@ -17,18 +31,23 @@ function App() {
             alt=""
           />
         </div>
-
         <div className="inner">
           <div className="sort__block">
             <Sort />
           </div>
-
-          <div className="list__block">
-            {buttonText.map((text) => (
-              <Button key={text}>
-                <span className="list__block-text">{text}</span>
-              </Button>
-            ))}
+          <div>
+            <div className="list__block">
+              {buttonText.map((text) => (
+                <Button key={text}>
+                  <span className="list__block-text">{text}</span>
+                </Button>
+              ))}
+            </div>
+            <div className="card__block">
+              {flights.map((obj) => (
+                <Card key={obj.id} {...obj} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
